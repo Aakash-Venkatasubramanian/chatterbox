@@ -20,7 +20,7 @@ io.on('connection', (socket) => {
     socket.broadcast.emit('message', 'A new user has joined!')
 
     socket.on('inputMessage', (message) => {
-        io.emit('outputMessage', message)
+        io.emit('message', message)
     })
 
     socket.on('disconnect', () => {
